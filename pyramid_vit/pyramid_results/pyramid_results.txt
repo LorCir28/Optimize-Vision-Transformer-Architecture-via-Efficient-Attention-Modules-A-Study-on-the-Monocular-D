@@ -1,0 +1,169 @@
+################################################################ TEST - S architecture ################################################################
+Model: pyramidalMETER
+/usr/local/lib/python3.10/dist-packages/torchsummaryX/torchsummaryX.py:101: FutureWarning: The default value of numeric_only in DataFrame.sum is deprecated. In a future version, it will default to False. In addition, specifying 'numeric_only=None' is deprecated. Select only valid columns or specify the value of numeric_only to silence this warning.
+  df_sum = df.sum()
+Trainable parameters: 5527168
+Mult-Adds: 1002103728
+Average test time:  46.586437389899984
+Test times:  [48.843531   45.70771777 45.469687   46.57803458 46.54457588 45.76718938
+ 46.10966385 46.15671693 46.96561636 45.90762803 46.4414526  46.2694435
+ 46.4181123  46.58868215 46.45288258 47.10630059 46.51860388 45.89632105
+ 47.3030698  46.49584261 46.60162397 46.93892463 47.82246798 48.29603694
+ 46.40862328 46.97694802 45.93966701 45.78747897 47.36578861 45.91449045]
+################################################################ TEST - XS architecture ################################################################
+Model: pyramidalMETER
+Trainable parameters: 2291800
+Mult-Adds: 590733408
+Average test time:  36.245884080600035
+Test times:  [35.63380747 35.20439502 34.98791993 35.37582325 35.62019382 35.284724
+ 34.59686569 35.32960744 35.89717645 36.80483198 36.51413851 36.4986921
+ 35.63058413 37.57906323 37.02945202 35.88950917 37.50938349 36.66652866
+ 37.33174838 36.07009225 36.80817638 36.87785511 35.78454419 36.44138363
+ 38.26806877 36.02735251 36.50768126 36.74023463 36.35191995 36.114769  ]
+
+
+
+
+
+############################ SINGLE ##########################################
+
+
+
+				S_METER				XS_METER		XXS_METER
+
+RMSE				47.0351				49.5654			54.6647
+
+inference time tot		68.5767				49.6159			29.7344
+
+inference time transf_block_1	0.0114				0.0062			0.0059
+
+inference time transf_block_2	0.0061				0.0028			0.0019
+
+inference time transf_block_3	0.0043				0.0017			0.0010
+
+
+
+
+
+				S_METAMETER			XS_METAMETER		XXS_METAMETER
+
+RMSE				49.2416				50.3820			59.1943
+
+inference time tot		60.8997				45.6955			26.2992
+
+inference time transf_block_1	0.0035				0.0023			0.0022
+
+inference time transf_block_2	0.0024				0.0015			0.0010
+
+inference time transf_block_3	0.0013				0.0008			0.0005
+
+
+
+
+
+				S_pyramidalMETER		XS_pyramidalMETER	XXS_pyramidalMETER	
+
+RMSE				48.4240				49.3895			53.6835
+
+inference time tot		46.5864				36.2458			(19.5523)
+
+inference time transf_block_1	0.0048				0.0029			(0.0018)
+
+inference time transf_block_2	0.0038				0.0023			(0.0014)
+
+inference time transf_block_3	0.0034				0.0019			(0.0011)
+
+
+
+
+
+
+
+############################### BINARY COMPARISON #################################################
+
+
+
+pyramidalMETER vs METER
+
+					S_ARCHITECTURE					XS_ARCHITECTURE				XXS_ARCHITECTURE
+
+RMSE					aggravation of 2.9%				improvement of 0.3%
+
+inference time tot			improvement of 32.1%				improvement of 26.9%
+
+inference time transf_block_1		improvement of 57.9%				improvement of 53.2%
+
+inference time transf_block_2		improvement of 37.7%				improvement of 17.9%
+
+inference time transf_block_3		improvement of 20.9%				aggravation of 11.8%
+
+
+
+
+
+
+############################# TRIPLE COMPARISON ###############################################
+
+
+
+############################# S SIZE ###############################################
+
+
+					METER		META		PYRA		METER_vs_META		METER_vs_PYRA
+
+RMSE					47.0351		49.2416		48.4240		-4.7%			-2.9%
+
+inference time tot			68.5767		60.8997		46.5864		+11.2%			+32.1%
+
+inference time transf_block_1		0.0114		0.0035		0.0048		+69.3%			+57.9%
+
+inference time transf_block_2		0.0061		0.0024		0.0038		+60.7%			+37.7%
+
+inference time transf_block_3		0.0043		0.0013		0.0034		+69.8%			+20.9%
+
+
+
+
+
+
+
+############################# XS SIZE ###############################################
+
+
+					METER		METAMETER	PYRA		METER_vs_META		METER_vs_PYRA
+
+RMSE					49.5654		50.3820		49.3895		-1.6%			+0.3%
+
+inference time tot			49.6159		45.6955		36.2458		+7.9%			+26.9%
+
+inference time transf_block_1		0.0062		0.0023		0.0029		+62.9%			+53.2%
+
+inference time transf_block_2		0.0028		0.0015		0.0023		+46.4%			+17.9%
+
+inference time transf_block_3		0.0017		0.0008		0.0019		+52.9%			-11.8%
+
+
+
+
+
+
+
+############################# XXS SIZE ###############################################
+
+
+					METER		METAMETER	PYRA		METER_vs_META		METER_vs_PYRA
+
+RMSE					54.6647		59.1943		53.6835		-8.3%			+1.8%
+
+inference time tot			29.7344		26.2992		16.5666		+11.5%			+44.3%
+
+inference time transf_block_1		0.0059		0.0022		0.0018		+62.7%			+69.5%
+
+inference time transf_block_2		0.0019		0.0010		0.0015		+47.7%			+21.1%
+
+inference time transf_block_3		0.0010		0.0005		0.0011		+50%			-10%
+
+
+
+
+

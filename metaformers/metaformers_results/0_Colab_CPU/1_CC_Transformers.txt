@@ -1,0 +1,44 @@
+Experiment runned throught Colab CPU: Intel(R) Xeon(R) CPU @ 2.20GHz
+######################################################## TEST - S architecture #########################################################
+Model: METER
+Trainable parameters: 3295168
+Mult-Adds: 975948144
+Mvit block 1 mean time:  0.011490107349626898
+Mvit block 2 mean time:  0.006179462537410146
+Mvit block 3 mean time:  0.004397153945030854
+
+Model: MetaMETER
+Trainable parameters: 3220864
+Mult-Adds: 1117478256
+Mvit block 1 mean time:  0.0035114656595438467
+Mvit block 2 mean time:  0.0024989062061080447
+Mvit block 3 mean time:  0.0013980904396876975
+######################################################## TEST - XS architecture ########################################################
+Model: METER
+Trainable parameters: 1449760
+Mult-Adds: 579763704
+Mvit block 1 mean time:  0.006276606238187006
+Mvit block 2 mean time:  0.0028461997755829826
+Mvit block 3 mean time:  0.0017450192946927108
+
+Model: MetaMETER
+Trainable parameters: 1403320
+Mult-Adds: 637792248
+Mvit block 1 mean time:  0.0023549324442551514
+Mvit block 2 mean time:  0.001562212665682727
+Mvit block 3 mean time:  0.0008826994320326276
+
+######################################################## TEST - XXS architecture ########################################################
+Model: METER
+Trainable parameters: 713464
+Mult-Adds: 186190392
+Mvit block 1 mean time:  0.005909562934336076
+Mvit block 2 mean time:  0.0019488651343589433
+Mvit block 3 mean time:  0.0010370793099452266
+
+Model: MetaMETER
+Trainable parameters: 682504
+Mult-Adds: 211970616
+Mvit block 1 mean time:  0.0022189052625609146
+Mvit block 2 mean time:  0.0010991420534020378
+Mvit block 3 mean time:  0.0005336074229087219

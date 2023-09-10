@@ -1,0 +1,14 @@
+wheel
+pandas
+numpy
+torch
+torchvision
+pickle-mixin
+matplotlib
+scipy
+tqdm
+pillow
+einops
+scikit-image
+scikit-learn
+torchsummaryX

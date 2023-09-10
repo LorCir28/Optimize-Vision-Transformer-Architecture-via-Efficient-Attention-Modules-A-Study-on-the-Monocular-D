@@ -1,0 +1,9 @@
+Memory available: df -h
+
+Virtual env on board
+1) Have python >= 3.3
+2) On the project root run 
+	- python -m venv VENVNAME
+	- source venv/bin/activate
+	- pip install -r requirements.txt (package==version)
+3) To stop venv with "deactivate"
