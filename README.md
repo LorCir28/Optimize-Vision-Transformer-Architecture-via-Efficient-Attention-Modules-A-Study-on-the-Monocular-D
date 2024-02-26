@@ -21,6 +21,9 @@ Just run notebooks in ./metaformers/code and ./pyramid_vit/code
 
 ## Collaborators
 - Claudio Schiavella (https://github.com/GitCharlie00)
+- Lorenzo Papa (https://www.researchgate.net/profile/Lorenzo_Papa6)
+- Paolo Russo (https://www.researchgate.net/profile/Paolo-Russo-5)
+- Irene Amerini (https://www.researchgate.net/profile/Irene-Amerini)
 
 ## References
 [1] Yu, Weihao, et al. "Metaformer is actually what you need for vision." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2022.
