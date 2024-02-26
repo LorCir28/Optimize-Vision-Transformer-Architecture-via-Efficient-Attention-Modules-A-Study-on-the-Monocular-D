@@ -1,6 +1,8 @@
-# Project of Vision and Perception exam at La Sapienza University of Rome (Artificial intelligence and Robotics master degree)
+# Optimize Vision Transformer Architecture via Efficient Attention Modules: A Study on the Monocular Depth Estimation Task
 
-# Optimize Vision Transformer architecture via efficient attention modules: a study on the monocular depth estimation task
+
+## Overview
+This project aims to evaluate a study of efficient attention modules on the Monocular Depth estimation Task.
 
 Two modifications [1,2] of METER [3] attention module are proposed and implemented to build two its versions: Meta-METER and Pyra-METER.
 
@@ -11,6 +13,14 @@ Evaluation metrics:
 - transformer block inference time
 - RMSE, MAE, AbsRel and accuracy values
 
+## Getting Started
+**Installation**
+
+Just run notebooks in ./metaformers/code and ./pyramid_vit/code
+
+
+## Collaborators
+- Claudio Schiavella (https://github.com/GitCharlie00)
 
 ## References
 [1] Yu, Weihao, et al. "Metaformer is actually what you need for vision." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2022.
@@ -19,6 +29,14 @@ Evaluation metrics:
 
 [3] Papa, Lorenzo, Paolo Russo, and Irene Amerini. "METER: a mobile vision transformer architecture for monocular depth estimation." IEEE Transactions on Circuits and Systems for Video Technology (2023).
 
-
-
-
+## Citation
+```
+@inproceedings{schiavella2023optimize,
+  title={Optimize Vision Transformer Architecture via Efficient Attention Modules: A Study on the Monocular Depth Estimation Task},
+  author={Schiavella, Claudio and Cirillo, Lorenzo and Papa, Lorenzo and Russo, Paolo and Amerini, Irene},
+  booktitle={International Conference on Image Analysis and Processing},
+  pages={383--394},
+  year={2023},
+  organization={Springer}
+}
+```
